@@ -23,8 +23,8 @@ app.use((req, res, next) => {
 
 // 3) ROUTE
 app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use('/api/v1', authRoute);
-app.use('/api/v1/works', workRoute);
+app.use('/api/v1/user', authRoute);
+app.use('/api/v1/work', workRoute);
 
 // use 'all' to access all http requests (get, post, delete, put, ...)
 // Why we don't write this middleware on first all route
