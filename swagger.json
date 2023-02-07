@@ -100,7 +100,15 @@
           {
             "name": "authorization",
             "in": "header",
-            "type": "string"
+            "type": "string",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "Learning to learn about"
+                }
+              }
+            }
           }
         ],
         "responses": {
