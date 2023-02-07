@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "api-training-xr6q.onrender.com/api/v1",
+  "host": "api-training-xr6q.onrender.com/api/v1/",
   "basePath": "/",
   "tags": [
     {
@@ -15,7 +15,7 @@
       "name": "work"
     }
   ],
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "paths": {
     "users/login": {
       "post": {
