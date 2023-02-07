@@ -1,16 +1,19 @@
 const express = require('express');
 const cors = require('cors');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../swagger.json');
+
 const workRoute = require('./routes/work.route');
 const userRoute = require('./routes/user.route');
 
-// const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/error.controller');
 const app = express();
 
 // 1) MIDDLEWARE
 app.use(cors());
 app.use(express.json());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(express.static(`${__dirname}/public`));
 
 app.use((req, res, next) => {

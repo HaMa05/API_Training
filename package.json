@@ -4,7 +4,8 @@
   "main": "serve.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "swagger-autogen": "node swagger.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -13,6 +14,10 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.0",
-    "nodemon": "^2.0.20"
-  }
+    "nodemon": "^2.0.20",
+    "swagger-autogen": "^2.23.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {}
 }
