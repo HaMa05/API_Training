@@ -5,7 +5,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../swagger.json');
 
 const workRoute = require('./routes/work.route');
-const userRoute = require('./routes/user.route');
+const authRoute = require('./routes/auth.route');
 
 const globalErrorHandler = require('./controllers/error.controller');
 const app = express();
@@ -22,8 +22,8 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTE
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use('/api/v1/users', userRoute);
+app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/v1', authRoute);
 app.use('/api/v1/works', workRoute);
 
 // use 'all' to access all http requests (get, post, delete, put, ...)

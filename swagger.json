@@ -17,7 +17,7 @@
   ],
   "schemes": ["https"],
   "paths": {
-    "/users/login": {
+    "/login": {
       "post": {
         "tags": ["authentication"],
         "description": "User Login",
@@ -48,7 +48,7 @@
         }
       }
     },
-    "/users/signup": {
+    "/signup": {
       "post": {
         "tags": ["authentication"],
         "description": "",
