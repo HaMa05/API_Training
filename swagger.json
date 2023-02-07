@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "api-training-xr6q.onrender.com/api/v1/",
+  "host": "api-training-xr6q.onrender.com/api/v1",
   "basePath": "/",
   "tags": [
     {
@@ -17,7 +17,7 @@
   ],
   "schemes": ["https"],
   "paths": {
-    "users/login": {
+    "/users/login": {
       "post": {
         "tags": ["authentication"],
         "description": "User Login",
@@ -48,7 +48,7 @@
         }
       }
     },
-    "users/signup": {
+    "/users/signup": {
       "post": {
         "tags": ["authentication"],
         "description": "",
@@ -82,7 +82,7 @@
         }
       }
     },
-    "works": {
+    "/works": {
       "get": {
         "tags": ["work"],
         "description": "",
@@ -131,7 +131,7 @@
         }
       }
     },
-    "works/{id}": {
+    "/works/{id}": {
       "get": {
         "tags": ["work"],
         "description": "",
