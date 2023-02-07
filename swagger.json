@@ -110,6 +110,8 @@
           },
           {
             "name": "body",
+            "in": "body",
+            "type": "object",
             "schema": {
               "type": "object",
               "properties": {
