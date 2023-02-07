@@ -215,6 +215,18 @@
             "in": "header",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "Learning to learn about"
+                }
+              }
+            }
           }
         ],
         "responses": {
