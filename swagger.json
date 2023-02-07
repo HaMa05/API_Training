@@ -76,7 +76,7 @@
         }
       }
     },
-    "/works": {
+    "works": {
       "get": {
         "tags": ["work"],
         "description": "",
@@ -113,7 +113,7 @@
         }
       }
     },
-    "/works/{id}": {
+    "works/{id}": {
       "get": {
         "tags": ["work"],
         "description": "",
