@@ -13,7 +13,6 @@ const app = express();
 // 1) MIDDLEWARE
 app.use(cors());
 app.use(express.json());
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(express.static(`${__dirname}/public`));
 
 app.use((req, res, next) => {
@@ -23,6 +22,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTE
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/api/v1/users', userRoute);
 app.use('/api/v1/works', workRoute);
 
