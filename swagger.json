@@ -106,7 +106,10 @@
           {
             "name": "authorization",
             "in": "header",
-            "type": "string",
+            "type": "string"
+          },
+          {
+            "name": "body",
             "schema": {
               "type": "object",
               "properties": {
