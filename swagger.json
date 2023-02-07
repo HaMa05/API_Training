@@ -17,7 +17,7 @@
   ],
   "schemes": ["https"],
   "paths": {
-    "/login": {
+    "/user/login": {
       "post": {
         "tags": ["authentication"],
         "description": "User Login",
@@ -48,7 +48,7 @@
         }
       }
     },
-    "/signup": {
+    "/user/signup": {
       "post": {
         "tags": ["authentication"],
         "description": "",
@@ -82,7 +82,7 @@
         }
       }
     },
-    "/works": {
+    "/work": {
       "get": {
         "tags": ["work"],
         "description": "",
@@ -131,7 +131,7 @@
         }
       }
     },
-    "/works/{id}": {
+    "/work/{id}": {
       "get": {
         "tags": ["work"],
         "description": "",
