@@ -60,7 +60,13 @@
               "type": "object",
               "properties": {
                 "username": {
-                  "example": "any"
+                  "example": "username"
+                },
+                "password": {
+                  "example": "password"
+                },
+                "passwordConfirmation": {
+                  "example": "password"
                 }
               }
             }
