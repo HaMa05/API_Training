@@ -20,7 +20,9 @@
     "/user/login": {
       "post": {
         "tags": ["authentication"],
-        "description": "User Login",
+        "description": "",
+        "summary": "Logs user into the system",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "body",
@@ -52,6 +54,8 @@
       "post": {
         "tags": ["authentication"],
         "description": "",
+        "summary": "Create user",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "body",
@@ -85,11 +89,14 @@
     "/work": {
       "get": {
         "tags": ["work"],
+        "summary": "Get all works",
         "description": "",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "authorization",
             "in": "header",
+            "required": true,
             "type": "string"
           }
         ],
@@ -102,10 +109,13 @@
       "post": {
         "tags": ["work"],
         "description": "",
+        "summary": "Create a work",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "authorization",
             "in": "header",
+            "required": true,
             "type": "string"
           },
           {
@@ -135,6 +145,8 @@
       "get": {
         "tags": ["work"],
         "description": "",
+        "summary": "Get a work by ID",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -145,6 +157,7 @@
           {
             "name": "authorization",
             "in": "header",
+            "required": true,
             "type": "string"
           }
         ],
@@ -160,6 +173,8 @@
       "delete": {
         "tags": ["work"],
         "description": "",
+        "summary": "Delete a work by ID",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -170,6 +185,7 @@
           {
             "name": "authorization",
             "in": "header",
+            "required": true,
             "type": "string"
           }
         ],
@@ -185,6 +201,8 @@
       "patch": {
         "tags": ["work"],
         "description": "",
+        "summary": "Update a work by ID",
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -195,6 +213,7 @@
           {
             "name": "authorization",
             "in": "header",
+            "required": true,
             "type": "string"
           }
         ],
@@ -205,6 +224,34 @@
           "404": {
             "description": "Not Found"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirmation": {
+          "type": "string"
+        }
+      }
+    },
+    "Work": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
         }
       }
     }
