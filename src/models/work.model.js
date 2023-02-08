@@ -6,6 +6,10 @@ const workSchema = new Schema(
       type: String,
       required: [true, 'Title not undefined'],
     },
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
   },
   { timestamps: true },
 );

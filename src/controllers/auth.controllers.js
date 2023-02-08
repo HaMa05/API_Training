@@ -78,6 +78,8 @@ const protect = async (req, res, next) => {
   if (!existingUser) {
     return next(new AppError('User not exists', 401));
   }
+
+  req.author = existingUser._id;
   next();
 };
 
